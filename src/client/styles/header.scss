@@ -2,4 +2,26 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
+    font-size: larger;
+    align-items: center;
+    background-color:rgb(80, 147, 236);
+    opacity: 1.1;
+    h1{
+        width:30%;
+        font-size: xx-large;
+        font-family:fantasy;
+    }
+    .navigation{
+        width:50%;
+    }
+    
+    ul{
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        margin: auto;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
+

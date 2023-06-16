@@ -10,7 +10,9 @@ module.exports = {
     stats: 'verbose',
     output: {
        libraryTarget: 'var',
-       library: 'Client'
+       library: 'Client',
+       filename: 'main.js', 
+       path: path.resolve(__dirname, 'dist'), 
     },
     module: {
         rules: [
@@ -22,7 +24,21 @@ module.exports = {
             {
                 test: /.scss$/,
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-            }
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'images/',
+                      publicPath: 'dist/images/',
+                    },
+                  },
+                ],
+              },
+            
         ]
     },
     plugins: [

@@ -3,34 +3,53 @@
     <head>
         <meta charset="utf-8">
         <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
     </head>
 
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
+            <h1 class="page-heading">
+                NewsEvaluator
+            </h1>
+            <div class="navigation menu">
+                <ul class="nav-list">
+                    <li class="nav-item">Home</li>
+                    <li class="nav-item">evaluate</li>
+                    <li class="nav-item">working</li>
+                    <li class="nav-item">About</li>
+                </ul>
+               
             </div>
         </header>
 
         <main>
+            <section class="home card">
+                <h2>news article evaluating using natural language processing</h2>
+                <div class="details">
+                    <div class="images">
+                    <img src="../images/4020769.jpg">
+                    <img src="../images/4990120.jpg">
+                   </div>
+                <p>This webapp uses the meaningcloud sentiment analysis tool for the evaluation of the given news article.<br><br>
+                <span>WHAT IS NLP &quest;</span><br>Natural language processing (NLP) refers to the branch of computer science and more specifically, the branch of artificial intelligence or AI concerned with giving computers the ability to understand text and spoken words in much the same way human beings can.
+                <br>
+                NLP combines computational linguistics rule based modeling of human language with statistical, machine learning, and deep learning models.
+                <br><br>
+                <span>WHAT IS SENTIMENT ANALYSIS</span><br>
+                Sentiment analysis (or opinion mining) is a natural language processing (NLP) technique used to determine whether data is positive, negative or neutral. Sentiment analysis is often performed on textual data to help businesses monitor brand and product sentiment in customer feedback, and understand customer needs.
+                </p>
+            </div>
+
+            </section>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                <form class="card" onsubmit="return Client.handleSubmit(event)">
+                    <h2>EVALUATE</h2>
+                    <input id="name" type="text" name="input" value=""  placeholder="enter text or url for evaluation">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             </section>
 
-            <section>
-                <strong>Form Results:</strong>
+            <section class="results">
                 <div id="results"></div>
             </section>
         </main>
